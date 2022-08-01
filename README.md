@@ -14,3 +14,4 @@ Discord 自動點歌爬蟲
 4. 在 `song list` 資料夾自己選擇或建立喜歡的音樂類型與歌單
 5.執行 
 ```
+`requirements.txt`

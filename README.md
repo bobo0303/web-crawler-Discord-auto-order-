@@ -38,5 +38,7 @@ python auto_song.py --style=EDM_EN
 --style (請選擇自己要選擇的曲風)
 ```
 
-
+---
+## Contact
+If you have any question, feel free to contact wiwi61666166@gmail.com
 

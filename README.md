@@ -15,7 +15,7 @@ Discord 自動點歌爬蟲
 5. 執行 `auto_song.py` 若有增加新的歌單請自己依照程式增加新模塊
 
 # auto_song 設定
-
+- 將所有下方 `EDM_EN` 修改為自己創立的 `.txt` 名
 ```
 with open("./song_list/EDM_EN.txt") as song_file_EDM_EN:
     for song_EDM_EN in song_file_EDM_EN:
@@ -23,13 +23,13 @@ with open("./song_list/EDM_EN.txt") as song_file_EDM_EN:
         song_number_EDM_EN = len(list_EDM_EN)
     shuffle(list_EDM_EN)
         
-if args.style == 'JP':
-  for n in list_JP:
+if args.style == 'EDM_EN':
+    for n in list_EDM_EN:
+        driver.find_element("xpath",
+                            '//*[@id="app-mount"]/div[2]/div/div[1]/div/div[2]/div/div[1]/div/div/div[3]/div[2]/main/form/div/div/div/div[1]/div/div[3]/div/div[2]/div').send_keys(n+'\n')
+        sleep(5)
     driver.find_element("xpath",
-                            '//*[@id="app-mount"]/div[2]/div/div[1]/div/div[2]/div/div[1]/div/div/div[3]/div[2]/main/form/div/div/div/div[1]/div/div[3]/div/div[2]/div').send_keys('!p ' + n + '\n')
-    sleep(5)
-  driver.find_element("xpath",
-                            '//*[@id="app-mount"]/div[2]/div/div[1]/div/div[2]/div/div[1]/div/div/div[3]/div[2]/main/form/div/div/div/div[1]/div/div[3]/div/div[2]/div').send_keys('總共點了:' +  str(song_number_JP) + '首 JP\n')
+                        '//*[@id="app-mount"]/div[2]/div/div[1]/div/div[2]/div/div[1]/div/div/div[3]/div[2]/main/form/div/div/div/div[1]/div/div[3]/div/div[2]/div').send_keys('總共點了:'+str(song_number_EDM_EN)+'首 EDM_EN\n')
 
 ```
 

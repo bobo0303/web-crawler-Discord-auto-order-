@@ -32,4 +32,11 @@ if args.style == 'EDM_EN':
                         '//*[@id="app-mount"]/div[2]/div/div[1]/div/div[2]/div/div[1]/div/div/div[3]/div[2]/main/form/div/div/div/div[1]/div/div[3]/div/div[2]/div').send_keys('總共點了:'+str(song_number_EDM_EN)+'首 EDM_EN\n')
 
 ```
+# 執行
+```
+python auto_song.py --style=EDM_EN
+--style (請選擇自己要選擇的曲風)
+```
+
+
 
